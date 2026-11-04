@@ -1,16 +1,16 @@
 # template
 
-**GitHub template** for new [danielnachumdev](https://github.com/danielnachumdev) repositories.
+**GitHub template** for new repositories.
 
-Use this when starting a repo so CI, agent docs, and capa are already wired — then replace the placeholder product text with the real project.
+Use this when starting a repo so CI, agent docs, and CapA are already wired — then replace the placeholder product text with the real project.
 
 ## What’s included
 
 | Piece | Role |
 | ----- | ---- |
-| [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | Thin CI → [`danielnachumdev/actions`](https://github.com/danielnachumdev/actions) `@latest` |
+| [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | Thin CI → shared reusable workflows (`@latest`) |
 | [`.github/dependabot.yml`](.github/dependabot.yml) | Weekly pip / npm / github-actions (no `noBump` — Semver off) |
-| [`.github/CODEOWNERS`](.github/CODEOWNERS) | Default owner `@danielnachumdev` |
+| [`.github/CODEOWNERS`](.github/CODEOWNERS) | Default code owner (edit to your GitHub handle) |
 | [`AGENTS.md`](AGENTS.md) | Orientation for coding agents |
 | [`capabilities.yaml`](capabilities.yaml) | CapA source of truth ([capa.sh](https://capa.sh/)) |
 
@@ -19,19 +19,13 @@ Use this when starting a repo so CI, agent docs, and capa are already wired — 
 ## Create a repo from this template
 
 1. On GitHub: **Use this template** → create the new repository.
-2. Clone it under `~/dev/projects/<name>/`.
+2. Clone the new repo locally.
 3. Edit `README.md` / `AGENTS.md` for the product; add `pyproject.toml` and/or `package.json` as needed.
-4. CI Detect picks up language lanes automatically (`allow-empty` can be removed once a lane exists).
-5. Re-apply HOW-TO-USE steps 3–5 on the **new** repo (labels, soft branch protection, security) — GitHub does not copy those from the template.
-6. Optional: `capa install` after editing `capabilities.yaml`.
-
-## Local clone of the template itself
-
-```bash
-gh repo clone danielnachumdev/template ~/dev/projects/template
-cd ~/dev/projects/template
-```
+4. Update [`.github/CODEOWNERS`](.github/CODEOWNERS) to the owning handle(s).
+5. CI Detect picks up language lanes automatically (`allow-empty` can be removed once a lane exists).
+6. Re-apply HOW-TO-USE steps 3–5 on the **new** repo (labels, soft branch protection, security) — GitHub does not copy those from the template.
+7. Optional: `capa install` after editing `capabilities.yaml`.
 
 ## CI
 
-Required check on `main`: **`CI / CI`**. Pin **`@latest`**. Checklist: [actions HOW-TO-USE](https://github.com/danielnachumdev/actions/blob/latest/HOW-TO-USE.md).
+Required check on `main`: **`CI / CI`**. Pin reusable workflows to **`@latest`**. Full adopt checklist lives in the shared actions hub `HOW-TO-USE.md`.
