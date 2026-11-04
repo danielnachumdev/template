@@ -25,6 +25,20 @@ skills:
       description: >-
         Capify an existing project: discover skills/rules/hooks/MCP servers
         across all providers and synthesize capabilities.yaml
+  - id: async
+    type: github
+    def:
+      repo: danielnachumdev/skills@async
+      description: >-
+        Offload the current task to a background Task subagent so the main
+        chat stays free
+  - id: writing-python
+    type: github
+    def:
+      repo: danielnachumdev/skills@writing-python
+      description: >-
+        Conventions for writing and refactoring Python: SRP classes/files,
+        strategy and gateway/service layout, clean import DAGs
 
 servers: []
 
