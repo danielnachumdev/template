@@ -1,6 +1,6 @@
 version: 1
 generator: capa@2.4.0
-generatedAt: '2026-11-04T00:15:09.929Z'
+generatedAt: '2026-11-04T12:46:59.127Z'
 skills:
   - id: async
     source: github
@@ -8,7 +8,7 @@ skills:
     skillName: async
     requestedVersion: null
     requestedRef: null
-    resolvedRef: e4af561a425340c7c23a0fb31d6f74cbabb4ed64
+    resolvedRef: ee0acc2cb887d7647f2fddb8d66b07715d37278c
     resolvedVersion: null
   - id: bootstrap
     source: github
@@ -26,13 +26,13 @@ skills:
     requestedRef: null
     resolvedRef: d7af1197d4214599b8143794212b6094c9096d99
     resolvedVersion: v2.4.0
-  - id: writing-python
+  - id: triage-board
     source: github
     repo: danielnachumdev/skills
-    skillName: writing-python
+    skillName: triage-board
     requestedVersion: null
     requestedRef: null
-    resolvedRef: e4af561a425340c7c23a0fb31d6f74cbabb4ed64
+    resolvedRef: ee0acc2cb887d7647f2fddb8d66b07715d37278c
     resolvedVersion: null
 plugins:
   - id: office-kit

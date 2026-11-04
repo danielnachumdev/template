@@ -32,13 +32,13 @@ skills:
       description: >-
         Offload the current task to a background Task subagent so the main
         chat stays free
-  - id: writing-python
+  - id: triage-board
     type: github
     def:
-      repo: danielnachumdev/skills@writing-python
+      repo: danielnachumdev/skills@triage-board
       description: >-
-        Conventions for writing and refactoring Python: SRP classes/files,
-        strategy and gateway/service layout, clean import DAGs
+        Batch many user decisions through a local web UI instead of chat
+        tables (accept / decline / defer)
 
 servers: []
 
