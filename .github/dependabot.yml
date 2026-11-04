@@ -1,0 +1,11 @@
+version: 2
+updates:
+  # Add pip / uv / npm blocks when the derived repo has those ecosystems.
+  # Do not add Semver "noBump" labels here unless Semver CI is adopted.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"

@@ -1,0 +1,38 @@
+name: CI
+
+# Thin orchestrator. Prefer requiring check "CI / CI".
+# Pin @latest for the floating release tag.
+# Semver omitted: this template does not publish versioned artifacts.
+# allow-empty: bare template has no pyproject/package.json yet; remove after
+# the derived repo adds a real language lane.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  ci:
+    name: CI
+    uses: danielnachumdev/actions/.github/workflows/ci.yml@latest
+    with:
+      allow-empty: true
+
+  dependabot-auto-merge:
+    name: Dependabot auto-merge
+    needs: [ci]
+    if: github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]'
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: danielnachumdev/actions/.github/workflows/dependabot-auto-merge.yml@latest

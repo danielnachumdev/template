@@ -1,0 +1,33 @@
+version: 1
+generator: capa@2.4.0
+generatedAt: '2026-11-04T00:06:39.695Z'
+skills:
+  - id: bootstrap
+    source: github
+    repo: infragate/capa
+    skillName: bootstrap
+    requestedVersion: null
+    requestedRef: null
+    resolvedRef: d7af1197d4214599b8143794212b6094c9096d99
+    resolvedVersion: v2.4.0
+  - id: capabilities-manager
+    source: github
+    repo: infragate/capa
+    skillName: capabilities-manager
+    requestedVersion: null
+    requestedRef: null
+    resolvedRef: d7af1197d4214599b8143794212b6094c9096d99
+    resolvedVersion: v2.4.0
+plugins:
+  - id: office-kit
+    source: github
+    repo: Minitour/office-kit
+    subpath: plugins/office-kit
+    requestedSearchName: null
+    requestedVersion: null
+    requestedRef: null
+    resolvedRef: 2b02585e0816bd347d78f4bcf766cf555dd07631
+    resolvedVersion: v0.2.0
+    manifestName: office-kit
+    manifestVersion: 0.2.0
+hooks: []
