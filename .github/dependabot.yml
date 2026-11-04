@@ -1,7 +1,29 @@
+# Copied from danielnachumdev/actions templates/github/dependabot.yml.
+# noBump labels omitted: Semver is not adopted on this template.
+# Restore noBump (and create the label) when enabling Semver CI.
 version: 2
 updates:
-  # Add pip / uv / npm blocks when the derived repo has those ecosystems.
-  # Do not add Semver "noBump" labels here unless Semver CI is adopted.
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+    groups:
+      pip-production:
+        dependency-type: "production"
+      pip-development:
+        dependency-type: "development"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:

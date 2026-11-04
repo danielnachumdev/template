@@ -19,15 +19,14 @@ Product pitch for humans: [`README.md`](README.md).
 
 ## After “Use this template”
 
+GitHub does **not** copy labels, branch protection, or security toggles. Re-do [HOW-TO-USE](https://github.com/danielnachumdev/actions/blob/latest/HOW-TO-USE.md) wire-up steps 3–5 on the new repo.
+
 1. Rename the product in `README.md` and rewrite this orientation table for the real codebase.
 2. Add the language layout (`pyproject.toml` / `package.json` / etc.). Detect turns on the matching CI lanes.
-3. Drop `allow-empty: true` from `ci.yml` once at least one lane is real (empty-layout success is only for the bare template).
-4. Extend Dependabot (`pip` / `uv` / `npm`) when those ecosystems exist; keep `github-actions`.
-5. Create label `dependencies` before Dependabot runs. Add Semver bump labels **only** if adopting Semver.
-6. Protect `main` with required check **`CI / CI`** (and **`Semver / Semver`** only if Semver is wired).
-
-Shared adopt docs: [actions HOW-TO-USE](https://github.com/danielnachumdev/actions/blob/latest/HOW-TO-USE.md).
+3. Drop `allow-empty: true` from `ci.yml` once at least one lane is real.
+4. Create label `dependencies`. Soft-protect `main`: require **`CI / CI`**, PR reviews (count 0 OK), `require_code_owner_reviews: false` so Dependabot auto-merge can land, admin bypass OK. Enable security settings + `allow_auto_merge` if using DAM.
+5. Semver only if publishing: uncomment Semver job, copy `cd.yml`, create bump labels, restore `noBump` on Dependabot, require **`Semver / Semver`**.
 
 ## Editing the template repo itself
 
-Keep the scaffold **language-agnostic**. Prefer `allow-empty: true` so CI stays green without inventing a dummy `pyproject.toml`. Do not add Semver here.
+Keep the scaffold **language-agnostic**. Prefer `allow-empty: true`. Do not enable Semver here. Keep HOW-TO-USE wire-up applied on this repo (protection, labels, security, DAM).

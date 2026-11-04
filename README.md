@@ -9,12 +9,12 @@ Use this when starting a repo so CI, agent docs, and capa are already wired — 
 | Piece | Role |
 | ----- | ---- |
 | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | Thin CI → [`danielnachumdev/actions`](https://github.com/danielnachumdev/actions) `@latest` |
-| [`.github/dependabot.yml`](.github/dependabot.yml) | Weekly GitHub Actions updates |
-| [`.github/CODEOWNERS`](.github/CODEOWNERS) | Default code owner |
+| [`.github/dependabot.yml`](.github/dependabot.yml) | Weekly pip / npm / github-actions (no `noBump` — Semver off) |
+| [`.github/CODEOWNERS`](.github/CODEOWNERS) | Default owner `@danielnachumdev` |
 | [`AGENTS.md`](AGENTS.md) | Orientation for coding agents |
 | [`capabilities.yaml`](capabilities.yaml) | CapA source of truth ([capa.sh](https://capa.sh/)) |
 
-Semver CD is **not** included. Add it only when the new repo publishes versioned artifacts (see [actions HOW-TO-USE](https://github.com/danielnachumdev/actions/blob/latest/HOW-TO-USE.md)).
+**actions HOW-TO-USE already applied on this repo:** thin `ci.yml` `@latest`, CODEOWNERS + Dependabot, `dependencies` label, soft `main` protection (`CI / CI`, reviews count 0, code-owner reviews off for Dependabot merge, admin bypass), security alerts/scanning, Dependabot auto-merge + `allow_auto_merge`. Semver / `cd.yml` / bump labels omitted on purpose.
 
 ## Create a repo from this template
 
@@ -22,7 +22,8 @@ Semver CD is **not** included. Add it only when the new repo publishes versioned
 2. Clone it under `~/dev/projects/<name>/`.
 3. Edit `README.md` / `AGENTS.md` for the product; add `pyproject.toml` and/or `package.json` as needed.
 4. CI Detect picks up language lanes automatically (`allow-empty` can be removed once a lane exists).
-5. Optional: `capa install` after editing `capabilities.yaml`.
+5. Re-apply HOW-TO-USE steps 3–5 on the **new** repo (labels, soft branch protection, security) — GitHub does not copy those from the template.
+6. Optional: `capa install` after editing `capabilities.yaml`.
 
 ## Local clone of the template itself
 
@@ -33,6 +34,4 @@ cd ~/dev/projects/template
 
 ## CI
 
-Required check to protect `main`: **`CI / CI`**.
-
-Pin stays **`@latest`**. Full adopt checklist: [actions HOW-TO-USE](https://github.com/danielnachumdev/actions/blob/latest/HOW-TO-USE.md).
+Required check on `main`: **`CI / CI`**. Pin **`@latest`**. Checklist: [actions HOW-TO-USE](https://github.com/danielnachumdev/actions/blob/latest/HOW-TO-USE.md).
