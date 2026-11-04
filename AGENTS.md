@@ -10,10 +10,10 @@ Product pitch for humans: [`README.md`](README.md).
 
 | Question | Answer |
 | -------- | ------ |
-| What is this? | Starter scaffold: Actions CI + Dependabot + CODEOWNERS + CapA + this file |
+| What is this? | Starter scaffold: Actions CI + Dependabot + CODEOWNERS + CAPA + this file |
 | CI hub | Shared reusable workflows pinned `@latest` (see thin orchestrator) |
 | Thin orchestrator | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) |
-| CapA | [`capabilities.yaml`](capabilities.yaml) — run `capa install` (do not hand-edit generated `.cursor/` / `.claude/`) |
+| CAPA | [`capabilities.yaml`](capabilities.yaml) — run `capa install` (do not hand-edit generated `.cursor/` / `.claude/`) |
 | Semver | **Omitted** until the repo publishes releases/wheels — then copy Semver jobs from the actions templates |
 | Secrets | Never commit tokens, keys, or live operator inventory; use dummy data in fixtures/PRs |
 

@@ -2,7 +2,7 @@
 
 **GitHub template** for new repositories.
 
-Use this when starting a repo so CI, agent docs, and CapA are already wired — then replace the placeholder product text with the real project.
+Use this when starting a repo so CI, agent docs, and CAPA are already wired — then replace the placeholder product text with the real project.
 
 ## What’s included
 
@@ -12,7 +12,7 @@ Use this when starting a repo so CI, agent docs, and CapA are already wired — 
 | [`.github/dependabot.yml`](.github/dependabot.yml) | Weekly pip / npm / github-actions (no `noBump` — Semver off) |
 | [`.github/CODEOWNERS`](.github/CODEOWNERS) | Default code owner (edit to your GitHub handle) |
 | [`AGENTS.md`](AGENTS.md) | Orientation for coding agents |
-| [`capabilities.yaml`](capabilities.yaml) | CapA source of truth ([capa.sh](https://capa.sh/)) |
+| [`capabilities.yaml`](capabilities.yaml) | CAPA source of truth ([capa.sh](https://capa.sh/)) |
 
 **actions HOW-TO-USE already applied on this repo:** thin `ci.yml` `@latest`, CODEOWNERS + Dependabot, `dependencies` label, soft `main` protection (`CI / CI`, reviews count 0, code-owner reviews off for Dependabot merge, admin bypass), security alerts/scanning, Dependabot auto-merge + `allow_auto_merge`. Semver / `cd.yml` / bump labels omitted on purpose.
 
