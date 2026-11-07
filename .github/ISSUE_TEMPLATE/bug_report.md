@@ -1,47 +1,53 @@
 ---
 name: Bug report
-about: Scannable ticket for broken behavior (outcome-focused, not a dump of logs)
+about: Report something that does not work as expected
 title: ""
 labels: bug
 assignees: ""
 ---
 
-## **Problem**
+## Description
 
-One or two sentences: what breaks for the operator/user, and what they see instead of the expected outcome. Link a related `#issue` if this is a follow-up.
+Clear, concise summary of the bug and who it affects.
 
 …
 
-## **Where**
+## Steps to reproduce
 
-Bullet the code paths, commands, or surfaces involved. Prefer enough for an agent to open the right files—not a full architecture recap already in `AGENTS.md` / `README.md`.
-
-- …
-
-## **Fix**
-
-Numbered steps when order matters (`1.`, `2.`, …)—one sentence each. Prefer the intended outcome (fix + verify) over speculative refactors.
+Numbered steps from a known starting state.
 
 1. …
-2. Add a regression test (or equivalent proof) that fails before and passes after.
+2. …
+3. …
 
-Optional at end: **Out of scope:** …
+## Expected behavior
 
-## **How Do We Know We Are Done? (Acceptance Criteria)**
+What should happen.
 
-Three to six checkboxes; one verifiable outcome each. Do not copy Fix steps verbatim.
+…
 
-- [ ] Repro from Problem no longer occurs (or is clearly mitigated as described)
-- [ ] Regression coverage at the right layer
-- [ ] Docs updated if operator- or user-facing behavior changed
+## Actual behavior
 
----
+What happens instead. Include the exact error message or stack trace if there is one.
 
-<details>
-<summary><strong>Examples (delete before submitting)</strong></summary>
+…
 
-**Fix** — Problem: one sentence on broken behavior. Where: file/command. Fix: `1. Fix …` `2. Add regression test`. AC: repro gone; test green.
+## Environment
 
-**Follow-up** — Problem: link prior `#issue`. Fix: only the remaining slice. AC: that slice verified.
+- **Version:** <!-- release, tag, or commit -->
+- **OS:**
+- **Browser / runtime:** <!-- if relevant -->
 
-</details>
+## Logs and screenshots
+
+```text
+<!-- Paste relevant log output. Remove tokens, passwords, and personal data. -->
+```
+
+<!-- Attach screenshots or a short recording if the problem is visual. -->
+
+## Additional context
+
+When it started, how often it happens, workarounds, related issues — anything else that helps.
+
+…

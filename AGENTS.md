@@ -11,7 +11,7 @@ Product pitch for humans: [`README.md`](README.md).
 | Question | Answer |
 | -------- | ------ |
 | What is this? | Starter scaffold: Actions CI + Dependabot + CODEOWNERS + issue templates + CAPA + this file |
-| Issue templates | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) — feature request (Background / Motivation / Requirements / AC) and bug report (Problem / Where / Fix / AC) |
+| Issue templates | [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) — feature request (Background / Motivation / Requirements / AC); bug report (Description / Steps to reproduce / Expected / Actual / Environment) |
 | CI hub | Shared reusable workflows pinned `@latest` (see thin orchestrator) |
 | Thin orchestrator | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) |
 | CAPA | [`capabilities.yaml`](capabilities.yaml) — run `capa install` (do not hand-edit generated `.cursor/` / `.claude/`) |
