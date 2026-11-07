@@ -11,6 +11,7 @@ Use this when starting a repo so CI, agent docs, and CAPA are already wired — 
 | [`.github/workflows/ci.yml`](.github/workflows/ci.yml) | Thin CI → shared reusable workflows (`@latest`) |
 | [`.github/dependabot.yml`](.github/dependabot.yml) | Weekly pip / npm / github-actions (no `noBump` — Semver off) |
 | [`.github/CODEOWNERS`](.github/CODEOWNERS) | Default code owner (edit to your GitHub handle) |
+| [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | Feature request (Background / Motivation / Requirements / AC) + industry-standard bug report (Description / Reproduce / Expected / Actual / Environment) |
 | [`AGENTS.md`](AGENTS.md) | Orientation for coding agents |
 | [`capabilities.yaml`](capabilities.yaml) | CAPA source of truth ([capa.sh](https://capa.sh/)) |
 
